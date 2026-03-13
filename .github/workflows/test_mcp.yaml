@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkouv4
+        uses: actions/checkout@v6
 
       - name: Dummy Run
         run: |
