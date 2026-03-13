@@ -1,0 +1,24 @@
+name: mcp-matrix-test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  matrix-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        env: [dev, stage, prod]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print Environment
+        run: echo "Testing environment ${{ matrix.env }}"
+
+      - name: Dummy Run
+        run: |
+          echo "Simulating deployment for ${{ matrix.env }}"
+          sleep 3
+          
