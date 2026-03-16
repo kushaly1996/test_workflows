@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Print Environment
-        run: eho "Testing environment ${{ matrix.env }}"
+        run: echo "Testing environment ${{ matrix.env }}"
 
       - name: Dummy Run
         run: |
